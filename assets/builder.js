@@ -65,6 +65,19 @@ jQuery(function($){
 
   // Drag fields from the palette into the form canvas. Clicking remains available
   // for touch devices and users who prefer not to drag.
+  const fieldSearch=$('#clever-field-search');
+  fieldSearch.on('input',function(){
+    const q=String($(this).val()||'').trim().toLowerCase();
+    let visible=0;
+    $('.clever-add-field').each(function(){
+      const haystack=String($(this).data('search')||($(this).text()+' '+$(this).data('type'))).toLowerCase();
+      const show=!q||haystack.includes(q);
+      $(this).prop('hidden',!show);
+      if(show)visible++;
+    });
+    $('.clever-no-fields').prop('hidden',visible!==0);
+  });
+
   $('.clever-add-field').attr('draggable','true')
     .on('dragstart',function(e){
       const transfer=e.originalEvent&&e.originalEvent.dataTransfer;
