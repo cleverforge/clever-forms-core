@@ -26,7 +26,7 @@ foreach ( $clever_forms_post_ids as $clever_forms_post_id ) {
 	wp_delete_post( (int) $clever_forms_post_id, true );
 }
 
-$clever_forms_uploads = wp_upload_dir();
+$clever_forms_uploads     = wp_upload_dir();
 $clever_forms_private_dir = trailingslashit( $clever_forms_uploads['basedir'] ) . 'clever-forms-private';
 
 if ( is_dir( $clever_forms_private_dir ) ) {
