@@ -1,3 +1,8 @@
+## 0.9.4-dev
+
+- Added palette-to-canvas drag-and-drop field creation and private-storage hardening.
+- Added release QA and coding-standards workflows for the RC branch.
+
 # Changelog
 
 All notable changes to Clever Forms Core will be documented here.
