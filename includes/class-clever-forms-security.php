@@ -121,8 +121,8 @@ final class Clever_Forms_Security {
 					array_map( 'sanitize_key', preg_split( '/[,\s]+/', (string) ( $field['accept'] ?? '' ) ) ?: array() )
 				)
 			);
-			$check = wp_check_filetype_and_ext( $tmp, $name );
-			$ext   = strtolower( (string) ( $check['ext'] ?? '' ) );
+			$check   = wp_check_filetype_and_ext( $tmp, $name );
+			$ext     = strtolower( (string) ( $check['ext'] ?? '' ) );
 
 			if ( '' === $ext || ! in_array( $ext, $allowed, true ) ) {
 				$errors[] = sprintf( __( '%s has a file type that is not allowed.', 'clever-forms' ), $label );

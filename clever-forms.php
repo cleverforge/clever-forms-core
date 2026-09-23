@@ -13,21 +13,25 @@
  * Text Domain: clever-forms
  * Domain Path: /languages
  */
-if (!defined('ABSPATH')) { exit; }
-define('CLEVER_FORMS_VERSION', '0.9.4-dev');
-define('CLEVER_FORMS_FILE', __FILE__);
-define('CLEVER_FORMS_DIR', plugin_dir_path(__FILE__));
-define('CLEVER_FORMS_URL', plugin_dir_url(__FILE__));
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; }
+define( 'CLEVER_FORMS_VERSION', '0.9.4-dev' );
+define( 'CLEVER_FORMS_FILE', __FILE__ );
+define( 'CLEVER_FORMS_DIR', plugin_dir_path( __FILE__ ) );
+define( 'CLEVER_FORMS_URL', plugin_dir_url( __FILE__ ) );
 require_once CLEVER_FORMS_DIR . 'includes/class-clever-addons.php';
 require_once CLEVER_FORMS_DIR . 'includes/class-clever-forms-pdf.php';
 require_once CLEVER_FORMS_DIR . 'includes/class-clever-forms-security.php';
 require_once CLEVER_FORMS_DIR . 'includes/class-clever-forms.php';
 
-add_action('init', static function (): void {
-	load_plugin_textdomain('clever-forms', false, dirname(plugin_basename(__FILE__)) . '/languages');
-});
+add_action(
+	'init',
+	static function (): void {
+		load_plugin_textdomain( 'clever-forms', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	}
+);
 
-register_activation_hook(__FILE__, ['Clever_Forms', 'activate']);
+register_activation_hook( __FILE__, array( 'Clever_Forms', 'activate' ) );
 Clever_Forms_Security::boot();
 Clever_Forms::instance();
-do_action('clever_forms_loaded', CLEVER_FORMS_VERSION);
+do_action( 'clever_forms_loaded', CLEVER_FORMS_VERSION );
