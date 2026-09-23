@@ -2,9 +2,8 @@
 Contributors: cleverforge
 Tags: forms, form builder, entries, pdf, signatures, webhooks
 Requires at least: 6.5
-Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 0.9.3-dev
+Stable tag: 0.9.4-dev
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,7 +49,7 @@ External services are contacted only when an administrator explicitly enables an
 No. Core functionality is not license-gated. Commercial add-ons can be installed separately and may require their own subscription or activation code.
 
 = Where are uploaded files and signatures stored? =
-Private entry files are stored below the WordPress uploads directory in a protected Clever Forms directory. They are not added to the public Media Library by default.
+Private entry files are stored outside the WordPress public web root by default, or in the administrator-defined CLEVER_FORMS_PRIVATE_DIR. They are not added to the public Media Library by default.
 
 = Does Clever Forms send data to external services automatically? =
 No. External transmission occurs only when a site administrator configures a webhook or activates a separate integration add-on.
@@ -60,6 +59,14 @@ No. External transmission occurs only when a site administrator configures a web
 Development build with a rebuilt signature field, cleaner commercial add-on architecture, confirmation emails, and core feature consolidation.
 
 == Changelog ==
+
+= 0.9.4-dev =
+* Added palette-to-canvas drag-and-drop field creation while preserving click-to-add and sortable field ordering.
+* Added server-side allowlisting for select, radio, checkbox, and multiselect values.
+* Added pre-entry upload validation and fail-closed private storage behavior.
+* Moved private file storage outside the public web root by default with CLEVER_FORMS_PRIVATE_DIR override support.
+* Added private-path boundary validation for signatures and PDFs.
+* Added nonce and capability enforcement before PDF downloads.
 
 = 0.9.3-dev =
 * Added side-by-side live visual preview with desktop, tablet, and mobile preview widths.
