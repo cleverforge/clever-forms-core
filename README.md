@@ -2,13 +2,13 @@
 
 **Clever Forms** is a modern WordPress form builder from **CleverForge** and **AI for Social Change, LLC**.
 
-> **Status:** public pre-release development. Current development version: **0.9.3-dev**. The first production release will be **1.0.0** after the WordPress.org release-readiness checklist is complete.
+> **Status:** public pre-release development. Current development version: **0.9.4-dev**. The first production release will be **1.0.0** after the WordPress.org release-readiness checklist is complete.
 
 Clever Forms is designed for organizations that need more than a basic contact form: applications, registrations, intake workflows, signatures, uploads, PDFs, notifications, conditional behavior, entry management, webhooks, and extensibility.
 
 ## Why Clever Forms
 
-- Visual drag-and-drop form building
+- Visual drag-and-drop form building, including palette-to-canvas field creation and sortable field ordering
 - Responsive multi-column layouts
 - Multi-page forms and progress indicators
 - Conditional field display
@@ -46,7 +46,7 @@ A WordPress.org installation link will be added after the plugin is approved and
 
 Clever Forms is being designed for workflows that may contain sensitive information. The current development line includes server-side validation for configured choices, strict required-upload handling, protected signature storage, authenticated private-file downloads, nonces, sanitization, capability checks, and privacy tooling.
 
-Production deployments should configure a private directory outside the web root when sensitive files are collected:
+Core now defaults to private file storage outside the WordPress public web root. Administrators can override the private path when needed:
 
 ```php
 define( 'CLEVER_FORMS_PRIVATE_DIR', '/srv/private/clever-forms' );
