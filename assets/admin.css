@@ -41,3 +41,7 @@ body.clever-modal-open{overflow:hidden}.clever-field-editor{position:fixed;inset
 .clever-add-field[draggable="true"]{cursor:grab}
 .clever-add-field.is-dragging{opacity:.55}
 #clever-canvas.is-drop-target{outline:2px dashed currentColor;outline-offset:6px;min-height:72px}
+
+.clever-field-search{width:100%;margin:0 0 8px}
+.clever-palette-help{margin:0 0 10px}
+.clever-no-fields{padding:8px 2px}
