@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Clever Forms 4.1.0\n"
+"Project-Id-Version: Clever Forms 0.9.4-dev\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: en\n"
@@ -19,4 +19,16 @@ msgid "Delete all forms, entries, settings, and private files when the plugin is
 msgstr ""
 
 msgid "Save Settings"
+msgstr ""
+
+msgid "Search fields"
+msgstr ""
+
+msgid "Search fields…"
+msgstr ""
+
+msgid "Drag a field into the form or click to add it."
+msgstr ""
+
+msgid "No fields match your search."
 msgstr ""
