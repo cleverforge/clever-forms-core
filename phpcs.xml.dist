@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ruleset name="Clever Forms Core">
+	<description>WordPress coding standards for the public Clever Forms Core plugin.</description>
+	<file>.</file>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/assets/*.min.js</exclude-pattern>
+	<rule ref="WordPress-Core" />
+	<rule ref="WordPress-Docs" />
+	<rule ref="WordPress-Extra" />
+</ruleset>
